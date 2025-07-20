@@ -1,65 +1,115 @@
 const commandsData = {
-  category1: {
-    icon: "📜",
-    title: "Category 1",
+  tickets: {
+    icon: "🎫",
+    title: "Sistema de Tickets",
     commands: [
       {
-        name: "/command1",
-        description: "Description of command1",
+        name: "/ticket create",
+        description: "Crea un nuevo ticket de soporte con numeración secuencial",
         permission: "All",
       },
       {
-        name: "/command2",
-        description: "Description of command2",
+        name: "/ticket close",
+        description: "Cierra el ticket actual y lo archiva automáticamente",
+        permission: "Staff",
+      },
+      {
+        name: "/ticket add",
+        description: "Añade un usuario al ticket actual",
+        permission: "Staff",
+      },
+      {
+        name: "/ticket remove",
+        description: "Remueve un usuario del ticket actual",
+        permission: "Staff",
+      },
+      {
+        name: "/ticket review",
+        description: "Permite al usuario dejar una review del soporte recibido",
         permission: "All",
       },
     ],
   },
-  category2: {
+  embeds: {
+    icon: "📝",
+    title: "Creador de Embeds",
+    commands: [
+      {
+        name: "/embed create",
+        description: "Abre el editor interactivo para crear embeds personalizados",
+        permission: "Staff",
+      },
+      {
+        name: "/embed preview",
+        description: "Muestra una previsualización en tiempo real del embed",
+        permission: "Staff",
+      },
+      {
+        name: "/embed send",
+        description: "Envía el embed creado al canal especificado",
+        permission: "Staff",
+      },
+      {
+        name: "/embed edit",
+        description: "Edita un embed existente con el editor interactivo",
+        permission: "Staff",
+      },
+    ],
+  },
+  welcome: {
+    icon: "👋",
+    title: "Sistema de Bienvenidas",
+    commands: [
+      {
+        name: "/welcome setup",
+        description: "Configura el sistema de bienvenidas para nuevos miembros",
+        permission: "Admin",
+      },
+      {
+        name: "/welcome channel",
+        description: "Establece el canal donde se enviarán los mensajes de bienvenida",
+        permission: "Admin",
+      },
+      {
+        name: "/welcome message",
+        description: "Personaliza el mensaje de bienvenida con variables dinámicas",
+        permission: "Admin",
+      },
+      {
+        name: "/welcome test",
+        description: "Prueba el sistema de bienvenidas con un mensaje de ejemplo",
+        permission: "Admin",
+      },
+    ],
+  },
+  config: {
     icon: "⚙️",
-    title: "Category 2",
+    title: "Configuración",
     commands: [
       {
-        name: "/command3",
-        description: "Description of command3",
+        name: "/config staff",
+        description: "Configura el rol de staff para gestión de tickets",
         permission: "Admin",
       },
       {
-        name: "/command4",
-        description: "Description of command4",
+        name: "/config logs",
+        description: "Establece el canal donde se registran los tickets",
         permission: "Admin",
       },
-    ],
-  },
-  category3: {
-    icon: "🎮",
-    title: "Category 3",
-    commands: [
       {
-        name: "/command5",
-        description: "Description of command5",
+        name: "/config archive",
+        description: "Configura la categoría para tickets archivados",
+        permission: "Admin",
+      },
+      {
+        name: "/config reviews",
+        description: "Establece el canal donde se publican las reviews",
+        permission: "Admin",
+      },
+      {
+        name: "/help",
+        description: "Muestra la lista completa de comandos disponibles",
         permission: "All",
-      },
-      {
-        name: "/command6",
-        description: "Description of command6",
-        permission: "All",
-      },
-    ],
-  },
-  category4: {
-    icon: "🛠️",
-    title: "Category 4",
-    commands: [
-      {
-        name: "/command7",
-        description: "Description of command7",
-        permission: "Mod",
-      },
-      {
-        name: "/command8",
-        description: "Description of command8",
-        permission: "Mod",
       },
     ],
   },
